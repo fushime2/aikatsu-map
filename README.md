@@ -1,2 +1,2 @@
 # aikatsu-map
-Create a CSV file for Google Maps
+アイカツの遊べるお店ページから店舗情報をCSVに書き込む
