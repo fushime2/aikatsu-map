@@ -8,7 +8,10 @@ from bs4 import BeautifulSoup
 def get_last_page(s):
     pos_f = s.find('p=')
     pos_e = s.find('&amp')
-    return s[pos_f+2 : pos_e]
+    if pos_f == -1:
+        return '1'
+    else:
+        return s[pos_f+2 : pos_e]
 
 def main():
     """Create csv file"""
@@ -54,6 +57,8 @@ def main():
                         s.find_next("td", class_="")
                     except:
                         break
+
+    print 'ok ok okke-'
 
 if __name__ == '__main__':
     main()
